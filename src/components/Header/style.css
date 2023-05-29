@@ -1,0 +1,45 @@
+@import url("../../Global.css");
+
+.header-container{    
+    box-shadow: 0.5px 0.5px 5px 0.5px var(--preto-primario);
+}
+
+#header-title{
+    color: var(--title-color);
+    font-size: 1.3rem;
+    font-weight: 400;  
+}
+
+#header-title span{
+    color: var(--title-color-variant);
+    font-weight: 800;
+}
+
+div .n354 ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+div .n354 ul li > a{
+    color: var(--font-color);
+}
+
+div .n354 ul li > a:hover{
+    color: var(--hover-color);
+}
+
+.elipse{
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--preto-primario);
+    background-color: var(--branco-primario);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

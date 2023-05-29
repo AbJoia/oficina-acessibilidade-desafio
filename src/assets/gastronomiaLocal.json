@@ -1,0 +1,26 @@
+[
+    {
+        "imagem":{
+            "nome":"gourmet",
+            "alt":""
+        },
+        "titulo": "Valparaíso Gourmet",
+        "texto":"O bairro Valparaíso, localizado a 2 km do Centro Histórico, abriga um dos polos gastronômicos mais charmosos e plurais de Petrópolis: o Valparaíso Gourmet. Cerca de 20 estabelecimentos fazem parte do circuito, que pode, facilmente, ser percorrido a pé."
+    },
+    {
+        "imagem":{
+            "nome":"feiraDeguste",
+            "alt":""
+        },
+        "titulo": "Deguste",
+        "texto":"Sempre no segundo final de semana do mês (entre sexta à noite e sábado), acontece em Petrópolis a Deguste, uma feira de cervejas artesanais. Marcam presença várias cervejarias da cidade e da região serrana, além de food trucks e barraquinhas de produtos gourmet e artesanato. Há também música ao vivo. Com entrada gratuita, a Deguste acontece na praça em frente à Câmara Municipal."
+    },
+    {
+        "imagem":{
+            "nome":"vilastgallen",
+            "alt":""
+        },
+        "titulo": "Vila St. Gallen",
+        "texto":"A Vila St. Gallen conta com diversos espaços gastronômicos, onde os visitantes podem saborear pratos deliciosos da culinária suíça, como fondue, raclette e salsichas tradicionais. O Biergarten, um jardim com mesas ao ar livre, é um local perfeito para degustar uma cerveja gelada e apreciar a paisagem deslumbrante da região."
+    }
+]

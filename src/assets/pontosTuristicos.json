@@ -1,0 +1,26 @@
+[
+    {
+        "imagem":{
+            "nome":"palacioDeCristal",
+            "alt":""
+        },
+        "titulo": "Palácio de Cristal",
+        "texto":"O Palácio de Cristal em Petrópolis é uma joia arquitetônica e um marco histórico no coração dessa encantadora cidade imperial brasileira. Construído em 1884, o palácio foi inspirado no famoso Crystal Palace de Londres, projetado pelo arquiteto Joseph Paxton."
+    },
+    {
+        "imagem":{
+            "nome":"museuImperial",
+            "alt":""
+        },
+        "titulo": "Museu Imperial",
+        "texto":"O Museu Imperial em Petrópolis é uma verdadeira preciosidade histórica e cultural. Localizado em um antigo palácio imperial, o museu é uma testemunha viva da época em que a cidade servia como refúgio de verão da família real brasileira."
+    },
+    {
+        "imagem":{
+            "nome":"serraDosOrgaos",
+            "alt":""
+        },
+        "titulo": "Serra dos Orgãos",
+        "texto":"A Serra dos Órgãos, localizada em Teresópolis, é um verdadeiro paraíso natural e um destino imperdível para os amantes da aventura e da natureza. Com suas paisagens deslumbrantes e formações rochosas impressionantes, a serra atrai visitantes de todas as partes em busca de momentos inesquecíveis."
+    }
+]

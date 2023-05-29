@@ -1,0 +1,51 @@
+@import url("../../Global.css");
+
+.linear-background {
+  background: linear-gradient(to right, var(--preto-primario), 81%, transparent),
+    url("../../assets/img/catedralSaoPedro.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  min-height: 32rem;
+}
+
+.linear-background .conteudo-banner h1 {
+  color: var(--branco-primario);
+  font-size: 2.5rem;
+  font-family: "Source Serif Pro", sans-serif;
+}
+
+.linear-background .conteudo-banner {
+  color: var(--branco-primario);
+}
+
+.linear-background .conteudo-banner h1 span {
+  color: var(--amarelo-primario);
+}
+
+.linear-background .conteudo-banner .container-pessoas img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.linear-background .conteudo-banner .container-avaliacao > img {
+  width: 18px;
+}
+
+.linear-background .conteudo-banner .container-avaliacao {
+  font-size: 0.7rem;
+  min-height: 4rem;
+}
+
+.linear-background .conteudo-banner .container-avaliacao span {
+  line-height: 4rem;
+}
+
+.linear-background .conteudo-banner .container-avaliacao .background-estrela {
+  background-color: var(--verde);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+}

@@ -1,0 +1,20 @@
+@import url("../../Global.css");
+
+.card{
+    background-color: var(--preto-secundario) !important;
+}
+
+.card .titulo, .card p{
+    color: var(--branco-primario);
+}
+
+.card .linha-card{
+    height: 1px;
+    width: 100%;     
+    background-color: var(--amarelo-primario); 
+    margin: 1rem 0 1rem 0;       
+}
+
+.imagem-escala-cinza{
+    filter: grayscale(1);
+}

@@ -1,0 +1,63 @@
+:root {
+  --preto-primario: #000;
+  --preto-secundario: #2b3030;
+  --cinza-claro: #EAEAEA;
+  --cinza-primario: #565656;
+  --cinza-secundario: #596363;
+  --branco-primario: #fff;
+  --branco-secundario: #f2faf9;
+
+  --amarelo-primario: #f5b963; 
+
+  --verde-claro: #d7fff1;
+  --verde-claro-secundario: #c5fbd8;
+  --verde: #1bb580;
+  --verde-primario: #166527;
+  --verde-escuro: #1a3724;
+
+  --azul-primario: #5BA0FF;
+  --vermelho:#ff3232;
+
+  --backgroud-color: var(--branco-primario);
+  --font-color: var(--preto-primario);
+  --font-color-variant: var(--branco-primario);
+  --backgroud-section-color: var(--branco-primario);
+  --backgroud-section-color-variant: var(--branco-secundario);
+  --title-color: var(--verde-primario);
+  --title-color-variant: var(--preto-primario);
+  --hover-color: var(--verde-primario);
+  --accessibility-background-color: var(--cinza-claro);
+  --button-color: var(--verde-escuro);
+  --button-color-variant: var(--amarelo-primario); 
+}
+
+html{
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--backgroud-color);
+  color: var(--font-color);
+  font-family: "Poppins", sans-serif;
+  max-width: 1423px;
+  margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Serif Pro", sans-serif;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--preto-primario);
+}

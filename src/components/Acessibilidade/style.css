@@ -1,0 +1,45 @@
+@import url("../../Global.css");
+
+#secao-acessibilidade{
+    background-color: var(--accessibility-background-color);
+}
+
+#botao-acessibilidade{
+    color: var(--font-color);
+    border: none;
+    background: none;
+    padding: 5px;
+}
+
+#icone-acessibilidade{
+    width: 28px;        
+}
+
+#icone-contraste{
+    width: 24px;        
+}
+
+#lista-botoes{
+    width: 100%;    
+}
+
+#lista-botoes > li{
+    margin-left: 5px;
+}
+
+#container-botoes > .btnAce, 
+#container-botoes > .btnAceC{
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: var(--vermelho);
+    color: var(--branco-primario);
+}
+
+#atalhos-navegacao ul li a{
+    color: var(--font-color);
+}
+
+#atalhos-navegacao ul li a:hover{
+    color: var(--hover-color);
+}

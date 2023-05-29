@@ -1,0 +1,33 @@
+@import url("../../Global.css");
+
+.container-form-hotel form{    
+    background-color: var(--backgroud-color);
+    box-shadow: 0.5px 0.5px 5px 0.5px var(--preto-primario);   
+    margin: auto;
+    margin-top: -3.75rem;    
+}
+
+.container-form-hotel form legend {
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.container-form-hotel form input{
+    background-color: var(--cinza-claro);
+    padding: 0.5rem;
+    width: 14rem;
+    border: none;
+}
+
+.container-form-hotel form button{
+    width: 20.75rem;
+    height: 2.70rem;
+    border: none;
+    background-color: var(--button-color);
+    color: var(--font-color-variant);
+    transition: 0.2s;
+}
+
+.container-form-hotel form button:hover{
+    filter: brightness(0.8);
+}

@@ -1,0 +1,6 @@
+@import url("../../Global.css");
+
+.footer-container{
+    background-color: var(--preto-primario);
+    color: var(--branco-primario);
+}

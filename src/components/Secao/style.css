@@ -1,0 +1,15 @@
+@import url("../../Global.css");
+
+.secao-container h2{
+    font-family: 'Source Serif Pro', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;    
+}
+
+.secao-container .linha{
+    min-width: 7rem;
+    width: 7%;
+    background-color: var(--amarelo-primario);
+    height: 5px;
+    margin: 1rem 0 1rem 0;   
+}
