@@ -28,8 +28,7 @@ export function FormHotel() {
     <Container className="container-form-hotel mb-5 m-auto">
       <Row>
         <Col>
-          <form
-            id="form-hotel"
+          <form 
             role="form"            
             className="p-3 d-none d-xl-block"
             onSubmit={(e) => handleSubmit(e)}

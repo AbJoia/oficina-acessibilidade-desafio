@@ -9,7 +9,6 @@ import "./style.css";
 
 export function Acessibilidade() {
   const { altoContraste, handleSetAltoContraste } = useContext(ThemeContext);
-  const [acessibilityIsOpen, setAcessibilityIsOpen] = useState(false);
   const [outlineIsActive, setOutlineIsActive] = useState(false);
   const selectors = "h1, h2, p, a, span, li, label, input, button";
   const outlineStyle =
@@ -147,95 +146,68 @@ export function Acessibilidade() {
 
   return (
     <Container
-      fluid
-      id="secao-acessibilidade"     
+      fluid      
+      id="secao-acessibilidade"
       aria-label="Seção de configurações de acessibilidade."
     >
-      <Container>
-        <Row>
-          <Col className="d-flex justify-content-center justify-content-xl-start align-items-center">
-            <img
-              id="icone-acessibilidade"              
-              src={iconeAcessibilidade}             
-            />
-            <div
-              id="botao-acessibilidade"              
-              onClick={(e) => setAcessibilityIsOpen(!acessibilityIsOpen)}
+      <Row>
+        <Col
+          xl={8}
+          className="d-flex justify-content-center justify-content-xl-between flex-wrap"
+        >
+          <div id="atalhos-navegacao" className="n354">
+            <ul              
+              aria-label="Navegação por atalhos no teclado"
+              className="d-flex justify-content-center mt-3 flex-wrap gap-2"
             >
-              Acessibilidade{" "}
-              {acessibilityIsOpen ? <BiUpArrow /> : <BiDownArrow />}
+              <li>
+                <a href="#conteudo">Ir para conteúdo[1]</a>
+              </li>
+              <li>
+                <a href="#menu">Ir para menu[2]</a>
+              </li>
+              <li>
+                <a href="#footer">Ir para rodapé[3]</a>
+              </li>
+            </ul>
+          </div>
+        </Col>
+        <Col
+          xl={4}
+          className="d-flex justify-content-center gap-3 justify-content-xl-between align-items-center mb-2 mb-xl-0 flex-wrap"
+        >
+          <img
+            id="icone-acessibilidade"            
+            src={iconeAcessibilidade}
+            alt=""
+          />
+          <Form.Switch
+            id="sw-20"
+            type="switch"
+            label=""
+            checked={outlineIsActive}
+            onChange={(e) => handleSetOutline(e)}
+            onKeyDown={(e) => handleSetOutline(e)}
+          />
+          <div id="container-botoes">
+            <div className="btnAce" onClick={() => handleFontSize(-1)}>
+              -A
             </div>
-          </Col>
-        </Row>
-      </Container>
-      <Container>
-        <Row className={acessibilityIsOpen ? "d-block" : "d-none"}>
-          <Col className="d-flex justify-content-center justify-content-xl-between flex-wrap">
-            <div className="p-2">
-              <Form.Switch 
-                id="sw-20"
-                type="switch"
-                label=""
-                checked={outlineIsActive}              
-                onChange={(e) => handleSetOutline(e)}
-                onKeyDown={(e) => handleSetOutline(e)}
+
+            <div className="btnAce" onClick={() => handleFontSize(1)}>
+              +A
+            </div>
+
+            <div className="btnAceC" onClick={handleTheme}>
+              <img
+                id="icone-contraste"
+                src={iconeContrasteBranco}
+                alt="Icone para alterar contraste."
               />
-              <div
-                id="container-botoes"
-                className="d-flex justify-content-xl-start justify-content-center gap-2 mb-2 mt-2"
-              >
-                <div
-                  className="btnAce"
-                  onClick={() => handleFontSize(-1)}
-                >
-                  -A
-                </div>
-
-                <div
-                  className="btnAce"                  
-                  onClick={() => handleFontSize(1)}
-                >
-                  +A
-                </div>
-
-                <div
-                  className="btnAceC"                  
-                  onClick={handleTheme}
-                >
-                  <img
-                    id="icone-contraste"
-                    src={iconeContrasteBranco}
-                    alt="Icone para alterar contraste."
-                  />
-                </div>
-              </div>
             </div>
-            <div id="atalhos-navegacao" className="n354">
-              <ul
-                tabIndex={0}
-                aria-label="Navegação por atalhos no teclado"
-                className="d-flex justify-content-center mt-3 flex-wrap gap-2"
-              >
-                <li>
-                  <a href="#pontos-turisticos">Pontos Turísticos[1]</a>
-                </li>
-                <li>
-                  <a href="#gastronomia">Gastronomia[2]</a>
-                </li>               
-                <li>
-                  <a href="#form-hotel">Buscar Hotéis[3]</a>
-                </li>
-                <li>
-                  <a href="#newsletter">Newsletter[4]</a>
-                </li>
-                <li>
-                  <a href="#footer">Rodapé[5]</a>
-                </li>
-              </ul>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </Col>
+      </Row>
     </Container>
   );
 }

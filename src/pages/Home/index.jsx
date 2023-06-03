@@ -12,8 +12,8 @@ import gastronomiaLocal from "../../assets/gastronomiaLocal.json";
 export function Home() {
   return (
     <>
-      <Header />
       <Acessibilidade />
+      <Header />
       <Banner />
       <FormHotel />
       <Secao
@@ -21,16 +21,14 @@ export function Home() {
         titulo="Descubra os pontos turísticos da região."
         descricao="Conheça a história que levou a região ser o que é hoje."
         backgroundColor="var(--backgroud-section-color)"          
-        dados={pontosTuristicos}   
-        accessKey="1"
+        dados={pontosTuristicos}        
       />
       <Secao
         id="gastronomia"
         titulo="Descubra a gastronomia da região."
         descricao="Sabores tradicionais com influências de imigrantes europeus e da cultura local."
         backgroundColor="var(--backgroud-section-color-variant)"              
-        dados={gastronomiaLocal}      
-        accessKey="2"
+        dados={gastronomiaLocal}       
       />
       <FormNewsletter/>
       <Footer/>

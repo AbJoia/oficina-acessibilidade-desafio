@@ -15,8 +15,7 @@ export function Secao({
   titulo,
   descricao,
   backgroundColor,
-  dados,
-  accessKey,
+  dados  
 }) {
 
   const images = [
@@ -37,7 +36,7 @@ export function Secao({
       <Container>
         <Row>
           <Col>
-            <h2 id={id}>
+            <h2 id={id} tabIndex={0}>
               {titulo}
             </h2>
             <div className="linha" />

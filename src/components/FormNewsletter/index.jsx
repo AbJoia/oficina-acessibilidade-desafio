@@ -8,7 +8,7 @@ var dataFormValues = {
   email: "",
 };
 
-export function FormNewsletter({id}) {
+export function FormNewsletter() {
   const [dataForm, setDataForm] = useState(dataFormValues);
 
   function handleSetDataForm(key, value) {
@@ -39,7 +39,8 @@ export function FormNewsletter({id}) {
           <Col lg={6}>
             <Form
               id="newsletter"
-              role="form"              
+              role="form" 
+              tabIndex={0}             
               onSubmit={(e) => handleSubmitForm(e)}
               className="m-auto m-lg-0"
             >
