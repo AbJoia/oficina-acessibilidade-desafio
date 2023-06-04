@@ -6,7 +6,7 @@ import "./style.css";
 
 export function Header() {
   return (
-    <Container fluid className="header-container">
+    <Container fluid className="header-container"  id="banner">
       <Container>
         <Row className="d-flex flex-lg-row p-1 justify-content-center">
           <Col className="d-flex mt-2 flex-row align-items-center justify-content-center justify-content-lg-start">
@@ -16,7 +16,7 @@ export function Header() {
           </Col>
           <Col className="d-flex mt-2 align-items-center justify-content-center justify-content-lg-end">
             <div id="menu" className="n354">
-              <ul tabIndex={0} accessKey="2">
+              <ul id="menu-list" accessKey="">
                 <li>
                   <a href="#pontos-turisticos">Pontos Turísticos</a>
                 </li>
@@ -28,10 +28,9 @@ export function Header() {
                 </li>
                 <li>
                   <div className="elipse">
-                    <img
-                      tabIndex={0}
+                    <img                      
                       src={userIcon}
-                      alt="Icone ilustrativo representando um usuário"
+                      alt=""
                     />
                   </div>
                 </li>

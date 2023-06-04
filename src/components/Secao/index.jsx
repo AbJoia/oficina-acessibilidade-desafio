@@ -36,7 +36,7 @@ export function Secao({
       <Container>
         <Row>
           <Col>
-            <h2 id={id} tabIndex={0}>
+            <h2 id={id}>
               {titulo}
             </h2>
             <div className="linha" />

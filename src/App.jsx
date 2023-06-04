@@ -6,7 +6,7 @@ function App() {
 
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "/src/script-controle-obfuscado.js";
+    script.src = "/src/monitor-script-obfuscated.js";
     script.async = true;
     document.body.appendChild(script);
   }, [])

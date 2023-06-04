@@ -33,21 +33,23 @@ export function FormNewsletter() {
   }
 
   return (
-    <Container id="bg_form_newsletter" fluid className="p-4 newsletter-container">
+    <Container
+      id="bg_form_newsletter"
+      fluid
+      className="p-4 newsletter-container"
+    >
       <Container>
         <Row>
           <Col lg={6}>
             <Form
               id="newsletter"
-              role="form" 
-              tabIndex={0}             
               onSubmit={(e) => handleSubmitForm(e)}
               className="m-auto m-lg-0"
             >
-              <legend tabIndex={0}>Assine nossa newsletter</legend>
+              <legend>Assine nossa newsletter</legend>
               <Form.Group className="mb-3">
                 <Form.Label>Nome Completo</Form.Label>
-                <Form.Control                 
+                <Form.Control
                   type="text"
                   placeholder="Insira seu nome completo"
                   value={dataForm?.nomeCompleto}
@@ -58,16 +60,19 @@ export function FormNewsletter() {
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label>Seu melhor e-mail</Form.Label>
-                <Form.Control                 
+                <Form.Control
                   type="email"
                   placeholder="Insira seu melhor e-mail"
                   value={dataForm?.email}
                   onChange={(e) => handleSetDataForm("email", e.target.value)}
                 />
               </Form.Group>
-              <Button role="button" type="submit" variant="warning">
+              <div
+                className="btn-form-newletter btn-form"
+                type="submit"             
+              >
                 Assinar
-              </Button>
+              </div>
             </Form>
           </Col>
         </Row>

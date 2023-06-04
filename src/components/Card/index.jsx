@@ -13,7 +13,7 @@ export function Card({ dado, image }) {
   
   return (
     <CardBootstrap
-      //aria-label={dado?.titulo}
+      aria-label=""
       style={{ width: "22rem" }}
       className="mt-3 mt-xl-0 card"
     >
@@ -23,12 +23,12 @@ export function Card({ dado, image }) {
         alt={dado?.imagem.alt}
       />
       <CardBootstrap.Body>
-        <CardBootstrap.Title className="titulo">
+        <CardBootstrap.Title className="titulo-card">
           {dado?.titulo}
         </CardBootstrap.Title>
         <div className="linha-card" />
 
-        <CardBootstrap.Text >{dado?.texto}</CardBootstrap.Text>
+        <CardBootstrap.Text>{dado?.texto}</CardBootstrap.Text>
       </CardBootstrap.Body>
     </CardBootstrap>
   );

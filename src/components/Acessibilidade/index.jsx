@@ -145,23 +145,16 @@ export function Acessibilidade() {
   }
 
   return (
-    <Container
-      fluid      
-      id="secao-acessibilidade"
-      aria-label="Seção de configurações de acessibilidade."
-    >
+    <Container fluid id="secao-acessibilidade">
       <Row>
         <Col
           xl={8}
           className="d-flex justify-content-center justify-content-xl-between flex-wrap"
         >
           <div id="atalhos-navegacao" className="n354">
-            <ul              
-              aria-label="Navegação por atalhos no teclado"
-              className="d-flex justify-content-center mt-3 flex-wrap gap-2"
-            >
+            <ul className="d-flex justify-content-center mt-3 flex-wrap gap-2">
               <li>
-                <a href="#conteudo">Ir para conteúdo[1]</a>
+                <a href="#conteudo-banner">Ir para conteúdo[1]</a>
               </li>
               <li>
                 <a href="#menu">Ir para menu[2]</a>
@@ -177,7 +170,7 @@ export function Acessibilidade() {
           className="d-flex justify-content-center gap-3 justify-content-xl-between align-items-center mb-2 mb-xl-0 flex-wrap"
         >
           <img
-            id="icone-acessibilidade"            
+            id="icone-acessibilidade"
             src={iconeAcessibilidade}
             alt=""
           />
@@ -190,19 +183,28 @@ export function Acessibilidade() {
             onKeyDown={(e) => handleSetOutline(e)}
           />
           <div id="container-botoes">
-            <div className="btnAce" onClick={() => handleFontSize(-1)}>
+            <div
+              className="btnAce" 
+              onClick={() => handleFontSize(-1)}
+            >
               -A
             </div>
 
-            <div className="btnAce" onClick={() => handleFontSize(1)}>
+            <div
+              className="btnAce"
+              onClick={() => handleFontSize(1)}
+            >
               +A
             </div>
 
-            <div className="btnAceC" onClick={handleTheme}>
+            <div
+              className="btnAceC" 
+              onClick={handleTheme}
+            >
               <img
                 id="icone-contraste"
                 src={iconeContrasteBranco}
-                alt="Icone para alterar contraste."
+                alt=""
               />
             </div>
           </div>

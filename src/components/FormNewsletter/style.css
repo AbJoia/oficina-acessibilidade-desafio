@@ -10,8 +10,10 @@
 .newsletter-container form input{
     border-radius: 0;
 }
-.newsletter-container form button{
+.newsletter-container form .btn-form-newletter{
     border-radius:0;
+    background-color: var(--amarelo-warning-bootstrap);
     width: 50%;
+    height: 2.5rem;
     color: var(--preto-primario);   
 }

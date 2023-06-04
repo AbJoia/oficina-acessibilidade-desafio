@@ -4,7 +4,7 @@
     background-color: var(--preto-secundario) !important;
 }
 
-.card .titulo, .card p{
+.card .titulo-card, .card p{
     color: var(--branco-primario);
 }
 

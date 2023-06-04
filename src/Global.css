@@ -7,7 +7,8 @@
   --branco-primario: #fff;
   --branco-secundario: #f2faf9;
 
-  --amarelo-primario: #f5b963; 
+  --amarelo-primario: #f5b963;
+  --amarelo-warning-bootstrap: #FFC107; 
 
   --verde-claro: #d7fff1;
   --verde-claro-secundario: #c5fbd8;
@@ -37,7 +38,7 @@ html{
 
 body {
   background-color: var(--backgroud-color);
-  color: var(--font-color);
+  color: var(--font-color) !important;
   font-family: "Poppins", sans-serif;
   max-width: 1423px;
   margin: auto;
