@@ -3,7 +3,8 @@
 #header-title{
     color: var(--title-color);
     font-size: 1.3rem;
-    font-weight: 400;  
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
 }
 
 #header-title span{

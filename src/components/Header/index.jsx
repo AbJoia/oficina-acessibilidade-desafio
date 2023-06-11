@@ -6,13 +6,13 @@ import "./style.css";
 
 export function Header() {
   return (
-    <Container fluid className="header-container"  id="banner">
+    <Container fluid className="header-container">
       <Container>
         <Row className="d-flex flex-lg-row p-1 justify-content-center">
           <Col className="d-flex mt-2 flex-row align-items-center justify-content-center justify-content-lg-start">
-            <p id="header-title">
+            <h1 id="header-title">
               SERRA<span>TOUR</span>
-            </p>
+            </h1>
           </Col>
           <Col className="d-flex mt-2 align-items-center justify-content-center justify-content-lg-end">
             <div id="menu" className="n354">

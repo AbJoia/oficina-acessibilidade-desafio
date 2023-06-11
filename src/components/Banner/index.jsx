@@ -18,10 +18,10 @@ export function Banner() {
           <Container className="conteudo-banner mt-5">
             <Row>
               <Col lg={6} className="p-4">
-                <h1 accessKey="" id="conteudo-banner">
+                <p id="titulo-banner">
                   Os melhores passeios gastronômicos e pontos turísticos da{" "}
                   <span>serra</span>.
-                </h1>
+                </p>
                 <p id="texto-banner">
                   A Região Serrana do Rio de Janeiro é um dos destinos
                   turísticos mais procurados do Brasil por sua beleza natural,
