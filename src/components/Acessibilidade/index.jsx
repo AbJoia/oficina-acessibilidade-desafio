@@ -154,7 +154,7 @@ export function Acessibilidade() {
           <div id="atalhos-navegacao" className="n354">
             <ul className="d-flex justify-content-center mt-3 flex-wrap gap-2">
               <li>
-                <a href="#conteudo-banner">Ir para conteúdo[1]</a>
+                <a href="#main">Ir para conteúdo[1]</a>
               </li>
               <li>
                 <a href="#menu">Ir para menu[2]</a>
