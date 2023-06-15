@@ -10,7 +10,7 @@ import "./style.css";
 export function Acessibilidade() {
   const { altoContraste, handleSetAltoContraste } = useContext(ThemeContext);
   const [outlineIsActive, setOutlineIsActive] = useState(false);
-  const selectors = "h1, h2, p, a, span, li, label, input, button";
+  const selectors = "h1, h2, p, a, span, li, label, input, button .titulo";
   const outlineStyle =
     "*:focus{outline: 5px solid var(--azul-primario) !important};";
 
@@ -148,7 +148,7 @@ export function Acessibilidade() {
     <Container fluid id="secao-acessibilidade">
       <Row>
         <Col
-          xl={8}
+          xl={6}
           className="d-flex justify-content-center justify-content-xl-between flex-wrap"
         >
           <div id="atalhos-navegacao" className="n354">
@@ -166,14 +166,16 @@ export function Acessibilidade() {
           </div>
         </Col>
         <Col
-          xl={4}
-          className="d-flex justify-content-center gap-3 justify-content-xl-between align-items-center mb-2 mb-xl-0 flex-wrap"
+          xl={6}
+          className="d-flex justify-content-center justify-content-xl-end gap-3 align-items-center mb-2 mb-xl-0"
         >
+          <div className="p-2">
           <img
             id="icone-acessibilidade"
             src={iconeAcessibilidade}
             alt=""
           />
+          </div>
           <Form.Switch
             id="sw-20"
             type="switch"

@@ -20,8 +20,8 @@
 }
 
 .container-form-hotel form .btn-form-hotel{
-    width: 20.75rem;
-    height: 2.70rem;
+    min-width: 20.75rem;
+    min-height: 2.70rem;
     border: none;
     background-color: var(--button-color);
     color: var(--font-color-variant);
