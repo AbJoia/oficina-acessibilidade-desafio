@@ -1,11 +1,8 @@
-import {useContext} from 'react';
-import { ThemeContext } from '../../context/ThemeContext';
 import { Card as CardBootstrap } from "react-bootstrap";
 
 import "./style.css";
 
 export function Card({ dado, image }) {
-  const {altoContraste} = useContext(ThemeContext);
 
   function getImageUrl(path) {
     return new URL(path, import.meta.url).href
@@ -17,7 +14,7 @@ export function Card({ dado, image }) {
       style={{ width: "22rem" }}
       className="mt-3 mt-xl-0 card"
     >
-      <CardBootstrap.Img className={altoContraste? "imagem-escala-cinza card_img" : "card_img"}        
+      <CardBootstrap.Img className="card_img"        
         variant="top"
         src= {getImageUrl(image)}
         alt={dado?.imagem.alt}
