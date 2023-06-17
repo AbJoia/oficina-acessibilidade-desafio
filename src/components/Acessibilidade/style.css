@@ -30,6 +30,7 @@
 #container-botoes{
     display: flex;
     gap: 0.2rem;
+    align-items: flex-end;
 }
 
 #container-botoes > .btnAce, 
@@ -42,6 +43,12 @@
     font-size: 17px !important; 
     background-color: var(--vermelho);
     color: var(--branco-primario);
+}
+
+#container-botoes #diminuir {
+    height: 34px;
+    width: 34px; 
+    font-size: 14px !important; 
 }
 
 #atalhos-navegacao ul li a{

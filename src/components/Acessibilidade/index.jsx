@@ -48,6 +48,7 @@ export function Acessibilidade() {
           />
           <div id="container-botoes">
             <div
+              id="diminuir"
               className="btnAce" 
               onClick={() => alert("Método não implementado...")}
             >
