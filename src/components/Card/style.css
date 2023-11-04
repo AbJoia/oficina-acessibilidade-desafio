@@ -1,15 +1,16 @@
 @import url("../../Global.css");
 
 .card{
-    background-color: var(--preto-secundario) !important;
+    background-color: var(--background-color) !important;
+    border: 1px solid var(--default-border-color) !important;
 }
 
 .card .titulo-card, .card p{
-    color: var(--branco-primario);
+    color: var(--font-color);
 }
 
 .card .linha-card{
-    height: 1px;
+    height: 2px;
     width: 100%;     
     background-color: var(--amarelo-primario); 
     margin: 1rem 0 1rem 0;       

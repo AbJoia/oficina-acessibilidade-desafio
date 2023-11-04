@@ -4,7 +4,8 @@
     background-color: var(--backgroud-color);
     box-shadow: 0.5px 0.5px 5px 0.5px var(--preto-primario);   
     margin: auto;
-    margin-top: -3.75rem;    
+    margin-top: -3.75rem;  
+    border: 1px solid var(--default-border-color) !important;  
 }
 
 .container-form-hotel form legend {

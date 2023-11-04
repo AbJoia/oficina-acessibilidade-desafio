@@ -30,6 +30,7 @@
   --accessibility-background-color: var(--cinza-claro);
   --button-color: var(--verde-escuro);
   --button-color-variant: var(--amarelo-primario); 
+  --default-border-color: var(--preto-secundario);
 }
 
 html{
