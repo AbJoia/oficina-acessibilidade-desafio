@@ -15,9 +15,8 @@ export function Card({ dado, image }) {
       className="mt-3 mt-xl-0 card"
     >
       <CardBootstrap.Img className="card_img"        
-        variant="top"
-        src= {getImageUrl(image)}
-        alt={dado?.imagem.alt}
+        variant="top"      
+        src= {getImageUrl(image)}        
       />
       <CardBootstrap.Body>
         <CardBootstrap.Title className="titulo-card">
