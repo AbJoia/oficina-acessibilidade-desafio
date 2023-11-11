@@ -1,11 +1,26 @@
 import { useState, useEffect, useContext } from "react";
 import { Container, Row, Col, Form } from "react-bootstrap";
+import { ThemeContext } from "../../context/ThemeContext";
 import iconeAcessibilidade from "../../assets/img/acessibilidadeIcon.png";
 import iconeContrasteBranco from "../../assets/img/contrastIconWhite.png";
 
 import "./style.css";
 
 export function Acessibilidade() {
+  const [outlineIsActive, setOutlineIsActive] = useState(false);
+  const {darkThemeIsActive, handleTheme} = useContext(ThemeContext);
+  //const selectors = "h1, h2, p, a, span, li, label, input, button";
+  //const outlineStyle = "*:focus{outline: 5px solid var(--azul-primario)};";
+
+  function handleOutlineIsActive(event){
+    setOutlineIsActive(!outlineIsActive);
+    alert("Metodo outline não implementado");
+  } 
+
+  function handleFontSize(updateValue){
+    alert("Metodo handleFontSize não implementado");
+  }
+
   return (
     <Container fluid id="secao-acessibilidade">
       <Row>
@@ -41,30 +56,30 @@ export function Acessibilidade() {
           <Form.Switch
             id="sw-20"
             type="switch"
-            label=""
-            checked={false}
-            onChange={(e) => alert("Método não implementado...")}
-            onKeyDown={(e) => alert("Método não implementado...")}
+            label="Moldurar elementos"
+            checked={outlineIsActive}
+            onChange={(e) => handleOutlineIsActive(e)}
+            onKeyDown={(e) => handleOutlineIsActive(e)}
           />
           <div id="container-botoes">
             <div
               id="diminuir"
               className="btnAce" 
-              onClick={() => alert("Método não implementado...")}
+              onClick={() => handleFontSize()}
             >
               -A
             </div>
 
             <div
               className="btnAce"
-              onClick={() => alert("Método não implementado...")}
+              onClick={() => handleFontSize()}
             >
               +A
             </div>
 
             <div
-              className="btnAceC" 
-              onClick={() => alert("Método não implementado...")}
+              className="btnAceC"               
+              onClick={handleTheme}
             >
               <img
                 id="icone-contraste"
