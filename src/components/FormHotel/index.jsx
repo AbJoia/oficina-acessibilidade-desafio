@@ -29,19 +29,15 @@ export function FormHotel() {
       <Row>
         <Col>
           <form
-            role="form"
-            aria-label="Formulário para busca de hotéis na região serrana."
-            tabIndex={0}
             className="p-3 d-none d-xl-block"
             onSubmit={(e) => handleSubmit(e)}
           >
             <div className="d-flex flex-column align-items-center flex-lg-row justify-content-lg-between align-items-lg-end">
               <div className="d-flex flex-column p-2">
-                <label htmlFor="checkin">Check In</label>
+                <label>Check In</label>
                 <input
                   type="date"
                   name="CheckIn"
-                  id="checkin"
                   value={buscarHoteis.checkIn}
                   onChange={(e) =>
                     handleSetBuscarHoteis("checkIn", e.target.value)
@@ -49,11 +45,10 @@ export function FormHotel() {
                 />
               </div>
               <div className="d-flex flex-column p-2">
-                <label htmlFor="checkout">Check Out</label>
+                <label>Check Out</label>
                 <input
                   type="date"
                   name="CheckOut"
-                  id="checkout"
                   value={buscarHoteis.checkOut}
                   onChange={(e) =>
                     handleSetBuscarHoteis("checkOut", e.target.value)
@@ -61,11 +56,10 @@ export function FormHotel() {
                 />
               </div>
               <div className="d-flex flex-column p-2">
-                <label htmlFor="viajantes">Viajantes</label>
+                <label>Viajantes</label>
                 <input
                   type="number"
                   name="Viajantes"
-                  id="viajantes"
                   value={buscarHoteis.viajantes}
                   onChange={(e) =>
                     handleSetBuscarHoteis("viajantes", e.target.value)
@@ -73,13 +67,12 @@ export function FormHotel() {
                 />
               </div>
               <div className="d-flex align-items-end p-2">
-                <button
+                <div
                   className="btn-form-hotel btn-form"
                   type="submit"
-                  aria-label="Enviar formulário para buscar hotéis"
                 >
                   Buscar Hotéis
-                </button>
+                </div>
               </div>
             </div>
           </form>
