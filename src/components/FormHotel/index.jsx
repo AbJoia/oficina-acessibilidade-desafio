@@ -30,13 +30,16 @@ export function FormHotel() {
         <Col>
           <form
             className="p-3 d-none d-xl-block"
+            tabIndex={0}
+            aria-label="Formulário para busca de hotéis na região"
             onSubmit={(e) => handleSubmit(e)}
           >
             <div className="d-flex flex-column align-items-center flex-lg-row justify-content-lg-between align-items-lg-end">
               <div className="d-flex flex-column p-2">
-                <label>Check In</label>
+                <label htmlFor="checkin">Check In</label>
                 <input
                   type="date"
+                  id="checkin"
                   name="CheckIn"
                   value={buscarHoteis.checkIn}
                   onChange={(e) =>
@@ -45,10 +48,11 @@ export function FormHotel() {
                 />
               </div>
               <div className="d-flex flex-column p-2">
-                <label>Check Out</label>
+                <label htmlFor="checkout">Check Out</label>
                 <input
                   type="date"
                   name="CheckOut"
+                  id="checkout"
                   value={buscarHoteis.checkOut}
                   onChange={(e) =>
                     handleSetBuscarHoteis("checkOut", e.target.value)
@@ -56,10 +60,11 @@ export function FormHotel() {
                 />
               </div>
               <div className="d-flex flex-column p-2">
-                <label>Viajantes</label>
+                <label htmlFor="viajantes">Viajantes</label>
                 <input
                   type="number"
                   name="Viajantes"
+                  id="viajantes"
                   value={buscarHoteis.viajantes}
                   onChange={(e) =>
                     handleSetBuscarHoteis("viajantes", e.target.value)
@@ -67,12 +72,13 @@ export function FormHotel() {
                 />
               </div>
               <div className="d-flex align-items-end p-2">
-                <div
+                <button
                   className="btn-form-hotel btn-form"
                   type="submit"
+                  aria-label="Enviar formulário para buscar hotéis."
                 >
                   Buscar Hotéis
-                </div>
+                </button>
               </div>
             </div>
           </form>

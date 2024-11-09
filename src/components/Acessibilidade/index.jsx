@@ -8,17 +8,43 @@ import "./style.css";
 
 export function Acessibilidade() {
   const [outlineIsActive, setOutlineIsActive] = useState(false);
-  const {darkThemeIsActive, handleTheme} = useContext(ThemeContext);
-  //const selectors = "h1, h2, p, a, span, li, label, input, button";
-  //const outlineStyle = "*:focus{outline: 5px solid var(--azul-primario)};";
+  const { darkThemeIsActive, handleTheme } = useContext(ThemeContext);
+  
+  function handleOutlineIsActive(event) {
+    if (
+      (event.nativeEvent instanceof KeyboardEvent && event.key === "Enter") ||
+      event.nativeEvent instanceof PointerEvent
+    ) {
+      setOutlineIsActive(!outlineIsActive);
+    }
+  }
 
-  function handleOutlineIsActive(event){
-    setOutlineIsActive(!outlineIsActive);
-    alert("Metodo outline não implementado");
-  } 
+  useEffect(() => {
+    const outlineStyle = "*:focus{outline: 5px solid var(--azul-primario)};";
 
-  function handleFontSize(updateValue){
-    alert("Metodo handleFontSize não implementado");
+    if (outlineIsActive) {      
+      let element = document.createElement("style");
+      element.innerHTML = outlineStyle;
+      document.head.insertAdjacentElement("beforeend", element);
+      return;
+    }
+
+    let elements = document.querySelectorAll("style");
+    elements.forEach((element) => {
+      if (element.innerHTML === outlineStyle) {
+        element.remove();
+      }
+    });
+  }, [outlineIsActive]);
+
+  function handleFontSize(updateValue) {
+    const selectors = "h1, h2, p, a, span, li, label, input, button";
+    let elements = document.querySelectorAll(selectors);
+    elements.forEach((element) => {
+      let currentFontSize = window.getComputedStyle(element).fontSize;
+      let newFontSize = parseInt(currentFontSize) + updateValue;
+      element.style.fontSize = `${newFontSize}px`;
+    })
   }
 
   return (
@@ -28,7 +54,7 @@ export function Acessibilidade() {
           xl={6}
           className="d-flex justify-content-center justify-content-xl-between flex-wrap"
         >
-          <div id="atalhos-navegacao" className="n354">
+          <nav id="atalhos-navegacao" className="n354">
             <ul className="d-flex justify-content-center mt-3 flex-wrap gap-2">
               <li>
                 <a href="#main">Ir para conteúdo[1]</a>
@@ -40,53 +66,59 @@ export function Acessibilidade() {
                 <a href="#footer">Ir para rodapé[3]</a>
               </li>
             </ul>
-          </div>
+          </nav>
         </Col>
         <Col
           xl={6}
           className="d-flex justify-content-center justify-content-xl-end gap-3 align-items-center mb-2 mb-xl-0"
         >
           <div className="p-2">
-          <img
-            id="icone-acessibilidade"
-            src={iconeAcessibilidade}
-            alt=""
-          />
+            <img
+              id="icone-acessibilidade"
+              src={iconeAcessibilidade}
+              alt="Icone mundial de acessibilidade"
+            />
           </div>
           <Form.Switch
             id="sw-20"
             type="switch"
             label="Moldurar elementos"
+            aria-label="Recurso para moldurar elementos em foco"
+            aria-checked={outlineIsActive}
             checked={outlineIsActive}
             onChange={(e) => handleOutlineIsActive(e)}
             onKeyDown={(e) => handleOutlineIsActive(e)}
           />
           <div id="container-botoes">
-            <div
+            <button
               id="diminuir"
-              className="btnAce" 
-              onClick={() => handleFontSize()}
+              className="btnAce"
+              aria-label="Diminuir tamanho do texto -A"
+              onClick={() => handleFontSize(-1)}
             >
               -A
-            </div>
+            </button>
 
-            <div
+            <button
               className="btnAce"
-              onClick={() => handleFontSize()}
+              aria-label="Aumentar tamanho do texto +A"
+              onClick={() => handleFontSize(1)}
             >
               +A
-            </div>
+            </button>
 
-            <div
-              className="btnAceC"               
+            <button
+              className="btnAceC"
+              arial-label="Ativar alto contraste"
+              aria-pressed={darkThemeIsActive}
               onClick={handleTheme}
             >
               <img
                 id="icone-contraste"
                 src={iconeContrasteBranco}
-                alt=""
+                alt="Icone ilustrativo de alto contraste"
               />
-            </div>
+            </button>
           </div>
         </Col>
       </Row>

@@ -13,31 +13,35 @@ export function Home() {
   return (
     <>
       <Acessibilidade />
-      <div id="banner">
+      <header id="banner">
         <Header />
-      </div>
+      </header>
       <Banner />
       <FormHotel />
-      <div id="main">
-        <Secao
-          id="pontos-turisticos"
-          titulo="Descubra os pontos turísticos da região."
-          descricao="Conheça a história que levou a região ser o que é hoje."
-          backgroundColor="var(--backgroud-section-color)"
-          dados={pontosTuristicos}
-        />
-        <Secao
-          id="gastronomia"
-          titulo="Descubra a gastronomia da região."
-          descricao="Sabores tradicionais com influências de imigrantes europeus e da cultura local."
-          backgroundColor="var(--backgroud-section-color-variant)"
-          dados={gastronomiaLocal}
-        />
-      </div>
+      <main id="main" accessKey="1" tabIndex={0}>
+        <section>
+          <Secao
+            id="pontos-turisticos"
+            titulo="Descubra os pontos turísticos da região."
+            descricao="Conheça a história que levou a região ser o que é hoje."
+            backgroundColor="var(--backgroud-section-color)"
+            dados={pontosTuristicos}
+          />
+        </section>
+        <section>
+          <Secao
+            id="gastronomia"
+            titulo="Descubra a gastronomia da região."
+            descricao="Sabores tradicionais com influências de imigrantes europeus e da cultura local."
+            backgroundColor="var(--backgroud-section-color-variant)"
+            dados={gastronomiaLocal}
+          />
+        </section>
+      </main>
       <FormNewsletter />
-      <div id="footer">
+      <footer id="footer" accessKey="3" tabIndex={0}>
         <Footer />
-      </div>
+      </footer>
     </>
   );
 }
