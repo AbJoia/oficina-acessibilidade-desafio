@@ -10,12 +10,7 @@ export function Acessibilidade() {
   const [outlineIsActive, setOutlineIsActive] = useState(false);
   const {darkThemeIsActive, handleTheme} = useContext(ThemeContext);
   //const selectors = "h1, h2, p, a, span, li, label, input, button";
-  //const outlineStyle = "*:focus{outline: 5px solid var(--azul-primario)};";
-
-  function handleOutlineIsActive(event){
-    setOutlineIsActive(!outlineIsActive);
-    alert("Metodo outline não implementado");
-  } 
+  //const outlineStyle = "*:focus{outline: 5px solid var(--azul-primario)};";  
 
   function handleFontSize(updateValue){
     alert("Metodo handleFontSize não implementado");
@@ -52,15 +47,7 @@ export function Acessibilidade() {
             src={iconeAcessibilidade}
             alt=""
           />
-          </div>
-          <Form.Switch
-            id="sw-20"
-            type="switch"
-            label="Moldurar elementos"
-            checked={outlineIsActive}
-            onChange={(e) => handleOutlineIsActive(e)}
-            onKeyDown={(e) => handleOutlineIsActive(e)}
-          />
+          </div>          
           <div id="container-botoes">
             <div
               id="diminuir"
