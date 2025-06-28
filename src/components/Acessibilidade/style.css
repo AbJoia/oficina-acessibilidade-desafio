@@ -16,7 +16,8 @@
 }
 
 #icone-contraste{
-    width: 24px;        
+    width: 24px;
+    filter: invert(100);        
 }
 
 #lista-botoes{
@@ -41,8 +42,8 @@
     height: 40px;
     width: 40px;
     font-size: 17px !important; 
-    background-color: var(--vermelho);
-    color: var(--branco-primario);
+    background-color: var( --amarelo-warning-bootstrap);
+    color: var(--preto-primario);
 }
 
 #container-botoes #diminuir {
