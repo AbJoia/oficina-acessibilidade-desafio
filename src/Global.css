@@ -34,6 +34,8 @@
   --default-border-color: var(--preto-secundario);
 }
 
+*:focus { outline: 5px solid var(--azul-primario) }
+
 html{
   font-size: 16px;
 }
