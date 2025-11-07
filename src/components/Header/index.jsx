@@ -10,13 +10,13 @@ export function Header() {
       <Container>
         <Row className="d-flex flex-lg-row p-1 justify-content-center">
           <Col className="d-flex mt-2 flex-row align-items-center justify-content-center justify-content-lg-start">
-            <h1 tabIndex={0} id="header-title">
+            <h1 id="header-title">
               SERRA<span>TOUR</span>
             </h1>
           </Col>
           <Col className="d-flex mt-2 align-items-center justify-content-center justify-content-lg-end">
-            <nav id="menu" className="n354">
-              <ul id="menu-list" accessKey="2" tabIndex={0}>
+            <div id="menu" className="n354">
+              <ul id="menu-list" accessKey="">
                 <li>
                   <a href="#pontos-turisticos">Pontos Turísticos</a>
                 </li>
@@ -30,12 +30,12 @@ export function Header() {
                   <div className="elipse">
                     <img                      
                       src={userIcon}
-                      alt="icone ilustrativo usuário"
+                      alt=""
                     />
                   </div>
                 </li>
               </ul>
-            </nav>
+            </div>
           </Col>
         </Row>
       </Container>

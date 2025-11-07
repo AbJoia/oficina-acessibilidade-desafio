@@ -18,11 +18,11 @@ export function Banner() {
           <Container className="conteudo-banner mt-5">
             <Row className="mb-5">
               <Col lg={6} className="p-4">
-                <p tabIndex={0} id="titulo-banner">
+                <p id="titulo-banner">
                   Os melhores passeios gastronômicos e pontos turísticos da{" "}
                   <span>serra</span>.
                 </p>
-                <p tabIndex={0} id="texto-banner">
+                <p id="texto-banner">
                   A Região Serrana do Rio de Janeiro é um dos destinos
                   turísticos mais procurados do Brasil por sua beleza natural,
                   clima agradável e aconchegante, além de oferecer diversas
@@ -30,33 +30,33 @@ export function Banner() {
                 </p>
                 <Row>
                   <Col className="container-pessoas d-flex flex-direction-row gap-1 mt-3">
-                    <img src={perfil1} alt="Imagem ilustrativa perfil rede social 1" />
-                    <img src={perfil2} alt="Imagem ilustrativa perfil rede social 2" />
-                    <img src={perfil3} alt="Imagem ilustrativa perfil rede social 3" />
-                    <img src={perfil4} alt="Imagem ilustrativa perfil rede social 4" />
-                    <img src={perfil5} alt="Imagem ilustrativa perfil rede social 5" />
+                    <img src={perfil1} alt="" />
+                    <img src={perfil2} alt="" />
+                    <img src={perfil3} alt="" />
+                    <img src={perfil4} alt="" />
+                    <img src={perfil5} alt="" />
                   </Col>
                   <Col className="container-avaliacao d-flex flex-direction-row justify-content-between aling-items-center flex-wrap">
-                    <img src={estrelaVerde} alt="Imagem ilustrativa estrela 1" />
+                    <img src={estrelaVerde} alt="" />
                     <span className="span">Avaliações</span>
                     <div className="d-flex flex-direction-row align-items-center gap-1">
                       <div className="background-estrela">
-                        <img src={estrelaBranca} alt="Imagem ilustrativa estrela 2" />
+                        <img src={estrelaBranca} alt="" />
                       </div>
                       <div className="background-estrela">
-                        <img src={estrelaBranca} alt="Imagem ilustrativa estrela 3" />
+                        <img src={estrelaBranca} alt="" />
                       </div>
                       <div className="background-estrela">
-                        <img src={estrelaBranca} alt="Imagem ilustrativa estrela 4" />
+                        <img src={estrelaBranca} alt="" />
                       </div>
                       <div className="background-estrela">
-                        <img src={estrelaBranca} alt="Imagem ilustrativa estrela 5" />
+                        <img src={estrelaBranca} alt="" />
                       </div>
                       <div className="background-estrela">
-                        <img src={estrelaBranca} alt="Imagem ilustrativa estrela 6" />
+                        <img src={estrelaBranca} alt="" />
                       </div>
                     </div>
-                    <span tabIndex={0} className="span">4.5 / 5</span>
+                    <span className="span">4.5 / 5</span>
                   </Col>
                 </Row>
               </Col>

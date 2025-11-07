@@ -10,7 +10,14 @@ import vilastgallen from "../../assets/img/vilastgallen.jpg";
 import gourmet from "../../assets/img/gourmet.jpg";
 import feiraDeguste from "../../assets/img/feiraDeguste.jpg";
 
-export function Secao({ id, titulo, descricao, backgroundColor, dados }) {
+export function Secao({
+  id,
+  titulo,
+  descricao,
+  backgroundColor,
+  dados  
+}) {
+
   const images = [
     museuImperial,
     palacioDeCristal,
@@ -21,30 +28,30 @@ export function Secao({ id, titulo, descricao, backgroundColor, dados }) {
   ];
 
   return (
-    <section>
-      <Container
-        fluid
-        className="secao-container p-5"
-        style={{ backgroundColor: backgroundColor }}
-      >
-        <Container>
-          <Row>
-            <Col>
-              <h2 id={id} tabIndex={0}>{titulo}</h2>
-              <div className="linha" />
-              <p tabIndex={0}>{descricao}</p>
-            </Col>
-          </Row>
-          <Row>
-            <Col className="d-flex justify-content-center justify-content-lg-between mt-2 flex-wrap">
-              {dados?.map((dado, index) => {
-                let imgUrl = images.filter((i) => i.includes(dado.imagem.nome));
-                return <Card key={index} dado={dado} image={imgUrl[0]} />;
-              })}
-            </Col>
-          </Row>
-        </Container>
+    <Container
+      fluid
+      className="secao-container p-5"
+      style={{ backgroundColor: backgroundColor }}
+    >
+      <Container>
+        <Row>
+          <Col>
+            <h2 id={id}>
+              {titulo}
+            </h2>
+            <div className="linha" />
+            <p>{descricao}</p>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="d-flex justify-content-center justify-content-lg-between mt-2 flex-wrap">
+            {dados?.map((dado, index) => {
+              let imgUrl = images.filter(i => i.includes(dado.imagem.nome))           
+              return <Card key={index} dado={dado} image={imgUrl[0]}/>;
+            })}
+          </Col>
+        </Row>
       </Container>
-    </section>
+    </Container>
   );
 }
