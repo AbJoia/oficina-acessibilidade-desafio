@@ -8,7 +8,7 @@ export function Footer() {
       <Row>
         <Col className="d-flex p-3 justify-content-center align-items-center">
           <span className="span">
-            Ciclo de palestras Residência em TIC Software 2025.2
+            Ciclo de palestras Residência em TIC Software 2026.1
           </span>
         </Col>
       </Row>
