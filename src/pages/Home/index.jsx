@@ -13,12 +13,12 @@ export function Home() {
   return (
     <>
       <Acessibilidade />
-      <header id="banner">
+      <div id="banner">
         <Header />
-      </header>
+      </div>
       <Banner />
       <FormHotel />
-      <main id="main">
+      <div id="main">
         <Secao
           id="pontos-turisticos"
           titulo="Descubra os pontos turísticos da região."
@@ -33,11 +33,11 @@ export function Home() {
           backgroundColor="var(--backgroud-section-color-variant)"
           dados={gastronomiaLocal}
         />
-      </main>
+      </div>
       <FormNewsletter />
-      <footer id="footer">
+      <div id="footer">
         <Footer />
-      </footer>
+      </div>
     </>
   );
 }
