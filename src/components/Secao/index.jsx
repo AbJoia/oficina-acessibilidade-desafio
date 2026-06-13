@@ -15,7 +15,7 @@ export function Secao({
   titulo,
   descricao,
   backgroundColor,
-  dados
+  dados  
 }) {
 
   const images = [
@@ -28,32 +28,30 @@ export function Secao({
   ];
 
   return (
-    <section>
-      <Container
-        fluid
-        className="secao-container p-5"
-        style={{ backgroundColor: backgroundColor }}
-      >
-        <Container>
-          <Row>
-            <Col>
-              <h2 tabIndex={0} id={id}>
-                {titulo}
-              </h2>
-              <div className="linha" />
-              <p tabIndex={0}>{descricao}</p>
-            </Col>
-          </Row>
-          <Row>
-            <Col className="d-flex justify-content-center justify-content-lg-between mt-2 flex-wrap">
-              {dados?.map((dado, index) => {
-                let imgUrl = images.filter(i => i.includes(dado.imagem.nome))
-                return <Card key={index} dado={dado} image={imgUrl[0]} />;
-              })}
-            </Col>
-          </Row>
-        </Container>
+    <Container
+      fluid
+      className="secao-container p-5"
+      style={{ backgroundColor: backgroundColor }}
+    >
+      <Container>
+        <Row>
+          <Col>
+            <h2 id={id}>
+              {titulo}
+            </h2>
+            <div className="linha" />
+            <p>{descricao}</p>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="d-flex justify-content-center justify-content-lg-between mt-2 flex-wrap">
+            {dados?.map((dado, index) => {
+              let imgUrl = images.filter(i => i.includes(dado.imagem.nome))           
+              return <Card key={index} dado={dado} image={imgUrl[0]}/>;
+            })}
+          </Col>
+        </Row>
       </Container>
-    </section>
+    </Container>
   );
 }

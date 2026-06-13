@@ -6,7 +6,7 @@
 }
 
 .card .titulo-card, .card p{
-    color: var(--font-color);
+    color: var(--cinza-variant);
 }
 
 .card .linha-card{
