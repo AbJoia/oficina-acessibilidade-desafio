@@ -29,14 +29,17 @@ export function FormHotel() {
       <Row>
         <Col>
           <form
+            aria-label="Formulário para busca de hotéis"
+            tabIndex={0}
             className="p-3 d-none d-xl-block"
             onSubmit={(e) => handleSubmit(e)}
           >
             <div className="d-flex flex-column align-items-center flex-lg-row justify-content-lg-between align-items-lg-end">
               <div className="d-flex flex-column p-2">
-                <label>Check In</label>
+                <label htmlFor="check-in">Check In</label>
                 <input
                   type="date"
+                  id="check-in"
                   name="CheckIn"
                   value={buscarHoteis.checkIn}
                   onChange={(e) =>
@@ -45,9 +48,10 @@ export function FormHotel() {
                 />
               </div>
               <div className="d-flex flex-column p-2">
-                <label>Check Out</label>
+                <label htmlFor="check-out">Check Out</label>
                 <input
                   type="date"
+                  id="check-out"
                   name="CheckOut"
                   value={buscarHoteis.checkOut}
                   onChange={(e) =>
@@ -56,9 +60,10 @@ export function FormHotel() {
                 />
               </div>
               <div className="d-flex flex-column p-2">
-                <label>Viajantes</label>
+                <label htmlFor="viajantes">Viajantes</label>
                 <input
                   type="number"
+                  id="viajantes"
                   name="Viajantes"
                   value={buscarHoteis.viajantes}
                   onChange={(e) =>
@@ -67,12 +72,13 @@ export function FormHotel() {
                 />
               </div>
               <div className="d-flex align-items-end p-2">
-                <div
+                <button
                   className="btn-form-hotel btn-form"
+                  aria-label="Botão para buscar hotéis"
                   type="submit"
                 >
                   Buscar Hotéis
-                </div>
+                </button>
               </div>
             </div>
           </form>
